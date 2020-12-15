@@ -27,11 +27,11 @@ spec:
           image: vikrammvk/final_flask:latest
           resources:
             requests:
-              memory: "64Mi"
-              cpu: "250m"
+              memory: "40Mi"
+              cpu: "40m"
             limits:
-              memory: "100Mi"
-              cpu: "350m"
+              memory: "50Mi"
+              cpu: "50m"
           ports:
           - name: liveness-port
             containerPort: 5000
@@ -845,11 +845,11 @@ spec:
           image: vikrammvk/final_react:latest
           resources:
             requests:
-              memory: "64Mi"
-              cpu: "250m"
+              memory: "40Mi"
+              cpu: "40m"
             limits:
-              memory: "100Mi"
-              cpu: "350m"
+              memory: "50Mi"
+              cpu: "50m"
           ports:
           - name: liveness-port
             containerPort: 3000
