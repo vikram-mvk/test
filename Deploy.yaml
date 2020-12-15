@@ -27,11 +27,11 @@ spec:
           image: vikrammvk/final_flask:latest
           resources:
             requests:
-              memory: "40Mi"
-              cpu: "40m"
+              memory: "64Mi"
+              cpu: "250m"
             limits:
-              memory: "50Mi"
-              cpu: "50m"
+              memory: "100Mi"
+              cpu: "350m"
           ports:
           - name: liveness-port
             containerPort: 5000
@@ -83,7 +83,7 @@ spec:
     nodePort: 30001
   sessionAffinityConfig:
     clientIP:
-      timeoutSeconds: 108000
+      timeoutSeconds: 86400
 
 ---
 
@@ -449,11 +449,11 @@ spec:
           name: feq
         resources:
             requests:
-              memory: "40Mi"
-              cpu: "40m"
+              memory: "64Mi"
+              cpu: "250m"
             limits:
-              memory: "50Mi"
-              cpu: "50m"
+              memory: "100Mi"
+              cpu: "350m"
 ---
 apiVersion: v1
 kind: Service
@@ -845,11 +845,11 @@ spec:
           image: vikrammvk/final_react:latest
           resources:
             requests:
-              memory: "40Mi"
-              cpu: "40m"
+              memory: "64Mi"
+              cpu: "250m"
             limits:
-              memory: "50Mi"
-              cpu: "50m"
+              memory: "100Mi"
+              cpu: "350m"
           ports:
           - name: liveness-port
             containerPort: 80
@@ -894,9 +894,9 @@ spec:
     tier: frontend
   ports:
   - name: http
-    port: 30001
+    port: 80
     targetPort: 80
-    nodePort: 30001
+    nodePort: 80
   type: LoadBalancer
 
 ---
